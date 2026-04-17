@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan Cortes - Afiliado Shopee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="min-h-screen pb-20">
+    <!-- Header -->
+    <header class="container mx-auto px-4 py-6 flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3 homename">
+            <div class="w-12 h-12 bg-[#ff5722] rounded-xl flex items-center justify-center">
+                <span class="text-white font-black text-2xl italic">T</span>
+            </div>
+            <div>
+                <h1 class="text-xl font-black tracking-tighter leading-none uppercase">TITAN <span class="orange-text">CORTES</span></h1>
+                <p class="text-[10px] font-bold text-orange-500 tracking-widest uppercase mt-1">Afiliado Shopee</p>
+            </div>
+        </div>
+
+        <div class="relative w-full max-w-xl">
+            <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+            <input type="text" id="searchInput" placeholder="Buscar produto..." 
+                class="w-full bg-[#1e222a] border border-white/5 py-3 px-12 rounded-xl text-sm text-white focus:outline-none focus:ring-1 focus:ring-orange-500">
+        </div>
+
+        <div class="flex items-center gap-2 bg-[#1e222a] px-4 py-2 rounded-xl border border-white/5">
+            <i class="fas fa-sort-amount-down text-gray-400"></i>
+            <select id="sortSelect" onchange="applyFiltersAndSort()" class="py-2 pr-4 text-sm font-bold outline-none cursor-pointer">
+                <option value="populares">Mais populares</option>
+                <option value="menor">Menor preço</option>
+                <option value="maior">Maior preço</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Categories -->
+    <nav class="container mx-auto px-4 mb-8 overflow-x-auto no-scrollbar">
+        <div class="flex gap-2" id="categoryTabs">
+            <!-- Gerado via JS -->
+        </div>
+    </nav>
+
+    <!-- Main Grid -->
+    <main class="container mx-auto px-4">
+        <div id="productGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+            <!-- Cards gerados via JS -->
+        </div>
+    </main>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

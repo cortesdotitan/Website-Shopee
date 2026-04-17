@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-dark: #0f1115;
+    --card-bg: #1a1d23;
+    --shopee-orange: #ff5722;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: white;
+    margin: 0;
+}
+
+/* Corrigindo o bug do Select (texto invisível) */
+select {
+    color: white !important;
+    background-color: #1e222a !important;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+select option {
+    background-color: #1e222a;
+    color: white;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-card:hover {
+    border-color: var(--shopee-orange);
+    transform: translateY(-4px);
+    background-color: #22262e;
+}
+
+.category-pill {
+    background-color: #1e222a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #9ca3af;
+    white-space: nowrap;
+
+    height: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.category-pill:hover {
+    border-color: var(--shopee-orange);
+}
+
+.category-pill.active {
+    background-color: var(--shopee-orange);
+    color: white;
+    border-color: var(--shopee-orange);
+}
+
+.orange-text {
+    color: var(--shopee-orange);
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.homename:hover {
+    cursor: pointer;
+}
+
