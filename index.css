@@ -1,16 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 :root {
+    --background: 230 25% 6%;
     --bg-dark: #0f1115;
     --card-bg: #1a1d23;
     --shopee-orange: #ff5722;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-dark);
+    font-family: "Space Grotesk", sans-serif;
+    background-color: hsl(var(--background));
     color: white;
     margin: 0;
+}
+
+.text-lg {
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.text-\[13px\] {
+    font-size: .75rem;
+    font-weight: 500px;
 }
 
 /* Corrigindo o bug do Select (texto invisível) */
@@ -27,7 +40,7 @@ select option {
 }
 
 .product-card {
-    background-color: var(--card-bg);
+    background-image: linear-gradient(145deg, hsl(230 22% 11%), hsl(230 22% 8%));;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.2s ease-in-out;
     display: flex;
@@ -85,3 +98,29 @@ select option {
     cursor: pointer;
 }
 
+.text-primary {
+    color: #50C878;
+}
+
+.border-border {
+    border-color: #e5e7eb10;
+}
+
+.productGrid,a:hover h3 {
+    color: var(--shopee-orange);
+}
+
+.truncate {
+    color: #9ca3af50;
+}
+
+
+.border-b {
+    border-bottom-width: 1px;
+    border-color: #9ca3af20;
+    padding-bottom: 20px;
+}
+
+.logo {
+    border-radius: 10px;
+}
